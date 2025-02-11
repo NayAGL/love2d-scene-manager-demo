@@ -1,16 +1,22 @@
-gameScene = {}
+gameScene = {} -- Creates an empty table.
 
-local config = require("config")
+local config = require("config") -- Imports variables from (config.lua).
+local Player = require("Player") -- Imports the button class.
 
-function gameScene.load() -- Optional.
+-- Create player here.
+player = Player:new(config.playerX, config.playerY, config.playerRadius,
+                       config.playerSpeed, config.playerSprint)
+
+function gameScene.load()
   love.window.setTitle("Game Scene") -- Might remove.
 end
 
 function gameScene.update(dt)
+  player:update(dt)
 end
 
 function gameScene.draw()
-  love.graphics.printf("Coming Soon...", 0, config.windowHeight / 2, config.windowWidth, "center") -- Remove.
+  player:draw()
 end
 
-return gameScene
+return gameScene -- Returns the table.
