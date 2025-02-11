@@ -17,7 +17,14 @@ local config = {
   btnReturnHeight = 40,
   -- Cursor adjustments.
   mouseX = 0,
-  mouseY = 0
+  mouseY = 0,
+  -- Player adjustments.
+  playerX = 100,
+  playerY = 100,
+  playerRadius = 20,
+  playerSpeed = 100,
+  playerSprint = 1.5,
+  playerHealth = 3
 }
 
 -- Play button adjustments.
