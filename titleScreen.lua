@@ -5,16 +5,16 @@ local Button = require("Button") -- Imports the button class.
 
 -- Create new buttons here.
 local playButton = Button:new(config.btnPlayX, config.btnPlayY,
-                        config.btnPlayWidth, config.btnPlayHeight, 
-                        1, 0.6, 0, "PLAY", 24, 1, 0.5, 0)
+                              config.btnPlayWidth, config.btnPlayHeight, 
+                              1, 0.6, 0, "PLAY", 24, 1, 0.5, 0)
 
 local exitButton = Button:new(config.btnExitX, config.btnExitY,
-                        config.btnExitWidth, config.btnExitHeight,
-                        0.5, 0, 0.4, "EXIT", 16, 0.4, 0, 0.4)
+                              config.btnExitWidth, config.btnExitHeight,
+                              0.5, 0, 0.4, "EXIT", 16, 0.4, 0, 0.4)
 
 local creditsButton = Button:new(config.btnCreditsX, config.btnCreditsY,
-                           config.btnCreditsWidth, config.btnCreditsHeight,
-                           0.1, 0.1, 0.2, "Credits", 14, 0, 0, 0.2)
+                                 config.btnCreditsWidth, config.btnCreditsHeight,
+                                 0.1, 0.1, 0.2, "Credits", 14, 0, 0, 0.2)
 
 function titleScreen.load()
   love.window.setTitle("Title Screen")
