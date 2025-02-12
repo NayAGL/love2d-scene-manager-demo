@@ -24,7 +24,13 @@ local config = {
   playerRadius = 20,
   playerSpeed = 100,
   playerSprint = 1.5,
-  playerHealth = 3
+  playerHealth = 3,
+  -- Enemy adjustments.
+  enemyX = 300,
+  enemyY = 300,
+  enemyRadius = 30,
+  enemySpeed = 50,
+  enemyHealth = 1
 }
 
 -- Play button adjustments.
