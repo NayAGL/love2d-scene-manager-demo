@@ -30,7 +30,7 @@ function Button:draw() -- Renders button graphics when called.
   end
   -- Button style and text adjustments. 
   love.graphics.rectangle("fill", self.x, self.y, self.width, self.height, 15, 15) -- (15, 15) = Rounded corners.
-  love.graphics.setColor(1, 1, 1) -- Will remove/change if font colors require manual input.
+  love.graphics.setColor(1, 1, 1)
   love.graphics.setFont(love.graphics.newFont(self.textSize))
   love.graphics.printf(self.text, self.x, self.y + (self.height - self.textSize) / 2, self.width, "center")
 end

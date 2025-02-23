@@ -29,7 +29,7 @@ function Enemy:update(dt, target) -- 'target' can be replaced with other objects
 end
 
 function Enemy:draw() -- Renders Enemy graphics when called.
-  love.graphics.setColor(0, 0, 0) -- Will remove/change. 
+  love.graphics.setColor(0, 0, 0) 
   love.graphics.circle("fill", self.x, self.y, self.radius)
 end
 

@@ -4,12 +4,12 @@ local Player = {} -- Creates a table.
 Player.__index = Player
 
 -- Creates a player class.
-function Player:new(x, y, radius, speed, shift)
+function Player:new(x, y, radius, speed, sprint)
   local obj = {
     x = x, y = y,
     radius = radius,
     speed = speed,
-    shift = shift
+    sprint = sprint
   }
   setmetatable(obj, Player)
   return obj
@@ -20,25 +20,17 @@ function Player:update(dt)
   local speed = self.speed 
   -- Sprint.
   if love.keyboard.isDown("lshift") then 
-    speed = speed * self.shift
+    speed = speed * self.sprint
   end
   -- Basic Movements. 
-  if love.keyboard.isDown("w") then
-    self.y = self.y - speed * dt
-  end
-  if love.keyboard.isDown("s") then
-    self.y = self.y + speed * dt
-  end
-  if love.keyboard.isDown("a") then
-    self.x = self.x - speed * dt
-  end
-  if love.keyboard.isDown("d") then
-    self.x = self.x + speed * dt
-  end
+  if love.keyboard.isDown("w") then self.y = self.y - speed * dt end
+  if love.keyboard.isDown("s") then self.y = self.y + speed * dt end
+  if love.keyboard.isDown("a") then self.x = self.x - speed * dt end
+  if love.keyboard.isDown("d") then self.x = self.x + speed * dt end
 end
 
 function Player:draw() -- Renders player graphics when called.
-  love.graphics.setColor(1, 1, 1) -- Will remove/change. 
+  love.graphics.setColor(1, 1, 1)
   love.graphics.circle("fill", self.x, self.y, self.radius)
 end
 

@@ -9,7 +9,7 @@ local returnButton = Button:new(config.btnReturnX, config.btnReturnY,
                          0.1, 0.6, 0.1, "Return", 14, 0.1, 0.5, 0.1)
 
 function creditsScene.load() -- Optional.
-  love.window.setTitle("Credits") -- Might remove.
+  love.window.setTitle("Credits")
 end
 
 function creditsScene.update(dt)

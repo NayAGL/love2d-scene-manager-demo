@@ -24,7 +24,6 @@ local config = {
   playerRadius = 20,
   playerSpeed = 100,
   playerSprint = 1.5,
-  playerHealth = 3,
   -- Enemy adjustments.
   enemyX = 300,
   enemyY = 300,
@@ -42,7 +41,7 @@ config.btnExitY = config.btnPlayY + config.btnPlayHeight + 7
 -- Credits button adjustments.
 config.btnCreditsX = (config.windowWidth - config.btnCreditsWidth) / 2
 config.btnCreditsY = config.btnExitY + config.btnExitHeight + 5
--- Return button adjustments..
+-- Return button adjustments.
 config.btnReturnX = 10
 config.btnReturnY = 10
 
